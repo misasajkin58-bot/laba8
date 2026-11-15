@@ -116,21 +116,13 @@ int Task4() {
     return 0;
 }
 int TaskDZ() {
-    double a, result = 1;
-    int n;
-    printf("Введите основание a: ");
-    scanf("%lf", &a);
-    printf("Введите степень n: ");
-    scanf("%d", &n);
-    int abs_n = n < 0 ? -n : n;
-    for (int i = 1; i <= abs_n; i++) {
-        result *= a;
-    }
-    if (n < 0) {
-        result = 1 / result;
+    double result = 1;
+
+    for (int i = 1; i <= 100; i++) {
+        result *= 1 + sin(0.1 * i);
     }
 
-    printf("%.2f^%d = %.6f\n", a, n, result);
+    printf("Результат: %.6f\n", result);
 
     return 0;
 }
